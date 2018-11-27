@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<classpath>
+	<classpathentry kind="con" path="org.eclipse.jdt.launching.JRE_CONTAINER"/>
+	<classpathentry kind="src" path="Project/Setting/Setting"/>
+	<classpathentry excluding="vo/|Connection/|dao/" kind="src" path="Project/src"/>
+	<classpathentry kind="src" path="Project/src/Connection"/>
+	<classpathentry kind="src" path="Project/src/dao"/>
+	<classpathentry kind="src" path="Project/src/vo"/>
+	<classpathentry exported="true" kind="lib" path="Project/WebContent/WEB-INF/lib/mysql-connector-java-5.1.47.jar"/>
+	<classpathentry kind="output" path="bin"/>
+</classpath>
