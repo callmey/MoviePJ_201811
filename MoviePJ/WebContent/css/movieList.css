@@ -5,10 +5,6 @@ body {
 		    text-align: center;
 		}
 
-		body, input, textarea, select, button, table {
-			font-family: '나눔고딕',NanumGothic,'돋움',Dotum,Helvetica,AppleSDGothicNeo-Medium,AppleGothic,sans-serif;
-   			font-size: 12px;
-		}
 		ul {
 			list-style: none;
 		}
@@ -122,6 +118,8 @@ body {
     		width: 775px;
     		padding: 25px 0 30px;
     		background-color: #fff;
+   
+
 		}
 		.lst_wrap ~ .paging{margin-top:20px!important;}
 		.lst_wrap+.lst_wrap{margin-top:4px!important;padding-top:4px;border-top:2px solid #b7b7b7;margin-top:-1px!important;}
@@ -129,8 +127,8 @@ body {
 		.lst_detail_t1{clear:both;padding-bottom:1px;background:url(https://ssl.pstatic.net/static/movie/2012/08/dot_line2.gif) repeat-x 0 100%;}
 		.lst_detail_t1 li{overflow:hidden;padding:15px 0 15px}
 		.lst_detail_t1 li+li{padding-top:16px;background:url(https://ssl.pstatic.net/static/movie/2012/08/dot_line2.gif) repeat-x;}
-		.lst_detail_t1 .thumb{float:left;width:99px;margin-right:19px;}
-		.lst_detail_t1 .thumb img{vertical-align:top;}
+		.lst_detail_t1.thumb{float:left;width:99px;margin-right:19px;}
+		.lst_detail_t1.thumb img{vertical-align:top;width:99px;height:141px;}
 		.lst_detail_t1 .lst_dsc{float:left;width:546px;margin-top:-4px;vertical-align:top;}
 		.lst_dsc>.tit{overflow:hidden;padding-bottom:2px;font-size:17px;line-height:24px;letter-spacing:-1px;font-weight:bold;white-space:nowrap;text-overflow:ellipsis;}
 		.lst_dsc .tit a{color:#000;}

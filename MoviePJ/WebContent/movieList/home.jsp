@@ -6,13 +6,6 @@
 	<meta charset="utf-8">
 	<title>naver movie</title>
 	<style type="text/css">
-		#contents {
-			margin: 0 auto;
-			width: 600px;
-			margin-top: 200px;
-			font-family:tahoma,NanumGothic,Helvetica,sans-serif;
-			font-size: 12px;
-		}
 
 		table {
 			overflow:hidden;
