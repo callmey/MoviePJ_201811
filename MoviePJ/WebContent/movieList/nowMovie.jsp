@@ -54,16 +54,16 @@
 						
 						for(MovieVO vo : list) {
 					%>
-					 <form action="#" name="frm">
-						<input type="hidden" name="mid" value="<%=vo.getId() %>" />
-						<input type="submit" value="" style="display:none" />
+					 <form action="detailOk.jsp" name="frm">
+						<input type="hidden" name="mid" value="<%=vo.getName() %>" />
+						<!-- <input type="submit" value="" style="display:none" /> -->
 					</form> 
 						<li>
 							<div class="thumb"><img src="<%=vo.getImage()%>"></div>
 							<dl class="lst_dsc">
 								<dt class="tit">
 									<span class="icon_rate"></span>
-										<a href="#" id="title"><%=vo.getName() %></a>
+										<a href="detailmovie.jsp" id="title"><%=vo.getName() %></a>
 								</dt>
 								<dd>
 									<dl class=info_txt1>
