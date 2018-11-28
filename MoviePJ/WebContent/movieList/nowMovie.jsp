@@ -7,7 +7,7 @@
 <html>
 <head>
 	<title></title>
-	<link rel="stylesheet" href="../css/movieList.css" />
+	<link rel="stylesheet" href="../css/movieList.css?after" />
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
 	<script type="text/javascript">
 		$(function() {
@@ -60,7 +60,15 @@
 							<div class="thumb"><img src="<%=vo.getImage()%>"></div>
 							<dl class="lst_dsc">
 								<dt class="tit">
-									<span class="icon_rate"></span>
+								<%
+									if(vo.getFilmrate().indexOf("12")>0) {
+										out.println("<span class='icon_rating_12'></span>");
+									}else if(vo.getFilmrate().indexOf("15")>0) {
+										out.println("<span class='icon_rating_15'></span>");
+									}else if(vo.getFilmrate().indexOf("전체")>0) {
+										out.println("<span class='icon_rating_all'></span>");
+									}
+								%>
 										<a href="#" onClick="document.getElementsByName('frm')[<%=vo.getId()%>-1].submit();"><%=vo.getName() %></a>
 								</dt>
 								<dd>

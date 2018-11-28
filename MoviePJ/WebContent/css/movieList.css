@@ -134,10 +134,13 @@ body {
 		.lst_dsc .tit a{color:#000;}
 		.lst_dsc .tit a:hover{text-decoration:none;color:#004cbb;}
 		.lst_dsc .tit .ico_t1{margin:5px 0 0 6px;vertical-align:top;}
-		.lst_dsc .tit [class^=icon_rate]{margin-right:8px;}
+		.lst_dsc .tit [class^=icon_rating]{display:inline-block;overflow:hidden;width:30px;height:30px;background:url(https://ssl.pstatic.net/static/movie/2016/05/sp_rating.png) no-repeat;line-height:999px;vertical-align:top;}
+		.lst_dsc .tit .icon_rating_all{background-position:-30px 0;}
+		.lst_dsc .tit .icon_rating_12{background-position:-30px -30px;}
+		.lst_dsc .tit .icon_rating_15{background-position:-30px -60px;}
 		.lst_dsc .info_txt1{overflow:hidden;}
 		.lst_dsc .info_txt1 dt{float:left;clear:both;overflow:hidden;width:31px;height:18px;margin-top:1px;background:url(https://ssl.pstatic.net/static/movie/2014/02/sp_lst_tit.png) no-repeat;text-indent:-99999em;}
-		.lst_dsc .info_txt1 .tit_t1{background-position:-110px 0;}
+		.lst_dsc .info_txt1 .tit_t1{-110px 0;}
 		.lst_dsc .info_txt1 .tit_t2{background-position:-150px 0;}
 		.lst_dsc .info_txt1 .tit_t3{background-position:-190px 0;}
 		.lst_dsc .info_txt1 dd{overflow:hidden;margin:2px 0 0 31px;line-height:18px;font-size:13px;color:#333;}
