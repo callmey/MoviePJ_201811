@@ -10,16 +10,15 @@
 	<link rel="stylesheet" href="../css/movieList.css" />
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
 	<script type="text/javascript">
-		$(function(){
-			$("#title").on('click', function(){
-				/* var mid = $("#mid").val();
-				location.href = "detailOk.jsp?mid=" + mid; */
-			 });
+		$(function() {
+			$("#menu02").removeClass("menu02");
+			$("#menu02").addClass("menu02_on");
 		});
 	</script>
 </head>
 <body>
-	<div id="container">
+<jsp:include page="../head/nav.jsp"></jsp:include>
+	<div id="obj">
 		<div class="article">
 			<div class="obj_section">	
 				<h3 class="title"><img src="https://ssl.pstatic.net/static/movie/2012/09/tit_movie1.png" width="120" height="24" alt="현재 상영영화"></h3>
@@ -52,18 +51,17 @@
 						MovieDBDAO dao = new MovieDBDAO();
 						ArrayList<MovieVO> list = dao.SelectAll();
 						
+						
 						for(MovieVO vo : list) {
-					%>
-					 <form action="detailOk.jsp" name="frm">
-						<input type="hidden" name="mid" value="<%=vo.getName() %>" />
-						<!-- <input type="submit" value="" style="display:none" /> -->
-					</form> 
+					%> 
+						<form name="frm" action="../movieList/detailmovie.jsp" method="post">
+							<input type="hidden" name="mid" value="<%=vo.getId() %>"/>
 						<li>
 							<div class="thumb"><img src="<%=vo.getImage()%>"></div>
 							<dl class="lst_dsc">
 								<dt class="tit">
 									<span class="icon_rate"></span>
-										<a href="detailmovie.jsp" id="title"><%=vo.getName() %></a>
+										<a href="#" onClick="document.getElementsByName('frm')[<%=vo.getId()%>-1].submit();"><%=vo.getName() %></a>
 								</dt>
 								<dd>
 									<dl class=info_txt1>
@@ -80,6 +78,7 @@
 								</dd>
 							</dl>
 						</li>
+						</form>
 						<%
 						}
 						%>

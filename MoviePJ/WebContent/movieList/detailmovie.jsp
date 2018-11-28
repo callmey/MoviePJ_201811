@@ -1,3 +1,5 @@
+<%@page import="vo.MovieVO"%>
+<%@page import="dao.MovieDBDAO"%>
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
 <!DOCTYPE html>
@@ -7,21 +9,21 @@
 <title>detailmovie.jsp</title>
 <style type="text/css">
 	.Div{		
-		margin-left: 180px;
 		background-color: white;
 		width: 800px;
 		height:694px;
+   		position: absolute;
 	}
 	.Div1{
-		margin-left: 30px;
+		margin-left: 90px;
 		float: left;	
-		width: 300px;	
+		width: 600px;	
 	}
 	img{		
-		margin-top: 30px;
 		margin-left: 100px;
 		width: 200px;
-		height:300px;						
+		height:300px;	
+		float: right;					
 	}
 	#btn1{
 		border: 1px solid blue;		
@@ -35,37 +37,59 @@
 		float: left;
 	}
 </style>
+<script type="text/javascript">
+	$(function() {
+		$("#menu02").removeClass("menu02");
+		$("#menu02").addClass("menu02_on");
+	});
+</script>
 </head>
 <body>
-<jsp:include page="../movieList/mainmovie.jsp"></jsp:include>
+<jsp:include page="../head/nav.jsp"></jsp:include>
+<%
+	MovieDBDAO dao = new MovieDBDAO();
+	MovieVO vo = new MovieVO();
+
+	String id = request.getParameter("mid");
+	
+	if(id!=null) {
+		int mid = Integer.parseInt(id);
+		vo = dao.getData(mid);
+	}else {
+		response.sendRedirect("../movieList/nowMovie.jsp");
+	}
+
+%>
+	<div id="obj">
 	<div class="Div">
 		<div class="Div1">
-			<h2>이름들어올자리엄청길구나구나구나구ㅏㄴ구나구나구나구나구ㅏㄴㅁㄻㄴㄻㄴㄻㄴㄻㄴㄻㄴㄹㄴㅁㄹ
+			<h2><%= vo.getName()%>
 				<a href="nowMovie.jsp"><input type="button" value="상영중" id="btn1"/></a>			
 			</h2>
 			<hr />
+			<div>
+			<img src="<%=vo.getImage() %>" alt="이미지받아옴" />	
 			<dl>
 				<dt>개요</dt>
-				<dd>개요받아옴</dd>
+				<dd><%=vo.getOutline() %></dd>
 				<dt>감독</dt>
-				<dd>감독받아옴</dd>
+				<dd><%=vo.getDirector() %></dd>
 				<dt>출연</dt>
-				<dd>출연받아옴</dd>
+				<dd><%=vo.getActor() %></dd>
 				<dt>등급</dt>
-				<dd>등급받아옴</dd>
+				<dd><%=vo.getFilmrate() %></dd>
 				<dt>흥행</dt>
-				<dd>흥행받아옴</dd>			
+				<dd><%=vo.getHighlight() %></dd>			
 			</dl>
+			</div>
 				<input type="button" value="예매하기" id="btn2"/><br /><br />
 			<hr />
 			줄거리
-			<p>줄거리 받아올곳</p>
+			<p><%=vo.getSummary() %></p>
 		
 		</div>
 		
-		<img src="../Images/bul.jpg" alt="이미지받아옴" />	
-		<br />
-		
+	</div>
 	</div>	
 </body>
 </html>

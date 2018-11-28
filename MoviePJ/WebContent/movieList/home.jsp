@@ -59,7 +59,8 @@
 	</style>
 </head>
 <body>
-	<div id="contents">
+<jsp:include page="../head/nav.jsp"></jsp:include>
+	<div id="obj">
 		<table>
 			<tr>
 				<td><img src="../Image/movie_image1.jpg" width="110px" height="140px"><div class="div1"><span id="rate1">예매율</span><span id="per1">27.75%</span></div></td>

@@ -10,7 +10,9 @@ public class MovieVO {
 	private String highlight;
 	private String summary;
 	private String image;
-
+	
+	public MovieVO() {};
+	
 	public MovieVO(int id, String name, String outline, String director, String actor, String filmrate,
 			String highlight, String summary, String image) {
 		super();
