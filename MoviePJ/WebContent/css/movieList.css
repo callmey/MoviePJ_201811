@@ -1,5 +1,8 @@
 @charset "UTF-8";
-
+html,body{
+		height:100%;
+	}
+	
 body {
 		    background: #727272 url(https://ssl.pstatic.net/static/movie/2012/06/body_bg.png) repeat;
 		    text-align: center;

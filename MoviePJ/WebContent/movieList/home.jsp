@@ -57,6 +57,13 @@
 		
 		}
 	</style>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+	<script type="text/javascript">
+		$(function(){
+			$("#menu01").removeClass("menu01");
+			$("#menu01").addClass("menu01_on");
+		});
+	</script>
 </head>
 <body>
 <jsp:include page="../head/nav.jsp"></jsp:include>
