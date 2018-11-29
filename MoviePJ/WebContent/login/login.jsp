@@ -1,3 +1,5 @@
+<%@page import="dao.MemberDAO"%>
+<%@page import="vo.MemberVO"%>
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
 <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
@@ -31,8 +33,15 @@
 	<link rel="stylesheet" type="text/css" href="../css/login.css">
 <!--===============================================================================================-->
 </head>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+<script type="text/javascript">
+</script>
 <body>
-	
+	<%
+		MemberDAO dao = new MemberDAO();
+		MemberVO vo = new MemberVO();
+		
+	%>
 	<div class="limiter">
 		<div class="container-login100" style="background-image: url('../Image/bg-01.jpg');">
 			<div class="wrap-login100 p-l-55 p-r-55 p-t-65 p-b-54">
